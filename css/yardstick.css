@@ -63,8 +63,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 4, ../scss/yardstick.scss */
+/* line 3, ../scss/yardstick.scss */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* line 8, ../scss/yardstick.scss */
 #map {
   width: 100vw;
   height: 100vh;
+}
+
+/* line 13, ../scss/yardstick.scss */
+#help {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 12px;
+}
+
+/* line 19, ../scss/yardstick.scss */
+#distance {
+  position: fixed;
+  top: 24px;
+  right: 0;
+  margin: 12px;
 }
