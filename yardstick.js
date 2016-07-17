@@ -17,7 +17,7 @@ window.addEventListener("keydown",keyDown);
 window.addEventListener("keyup",keyUp);
 myMap.addEventListener("mousedown",mouseDown);
 document.getElementById("add-button").addEventListener("touchstart",touchStart);
-document.getElementById("add-button").addEventListener("mousedown",touchStart);
+//document.getElementById("add-button").addEventListener("mousedown",touchStart);
 
 // Get midpoint
 var midx=Math.floor( window.innerWidth/2 );
