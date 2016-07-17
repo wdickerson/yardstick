@@ -16,6 +16,14 @@ var markerClick = false;
 window.addEventListener("keydown",keyDown);
 window.addEventListener("keyup",keyUp);
 myMap.addEventListener("mousedown",mouseDown);
+document.getElementById("add-button").addEventListener("touchstart",touchStart);
+document.getElementById("add-button").addEventListener("mousedown",touchStart);
+
+// Get midpoint
+var midx=Math.floor( window.innerWidth/2 );
+var midy=Math.floor( window.innerHeight/2
+            - window.innerHeight/10 );
+
 
 // Keep up with the space bar status.
 // Change cursor when it's down
@@ -53,6 +61,23 @@ function mouseDown(e){
     } else {
         markerClick=false;
     }
+}
+
+function touchStart(){
+    markers.push( new L.marker(map.containerPointToLatLng([midx,midy]),
+                                    {draggable:true}) );
+                                    
+    //map.containerPointToLatLng();
+                            
+    i = markers.length-1;
+    map.addLayer( markers[i]);
+
+    // Subscribe to two event listeners on each new marker
+    markers[i].addEventListener("dragend",drawLines,false);
+    addRemoveFunction(markers[i]);
+
+    // Draw lines when a new marker is added
+    drawLines();
 }
 
 // Adding a "mousedown" event listener to each new marker.

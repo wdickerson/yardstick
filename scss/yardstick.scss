@@ -7,7 +7,7 @@ body {
 }
 #map {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     //cursor: crosshair;
 }
 #help{
@@ -16,9 +16,26 @@ body {
     right: 0;
     margin: 12px;
 }
-#distance {
+#crosshair {
     position: fixed;
-    top: 24px;
-    right: 0;
-    margin: 12px;
+    left: calc(50vw - .15in);
+    top: calc(50vh - .15in);
+    z-index: 1;
+}
+#add-button {
+    flex: 4;
+    font-size: 7vh;
+}
+#distance {
+    flex: 1;
+    min-width: 140px;
+}
+#top-bar {
+    height: 10vh;
+    line-height: 10vh;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-flow: row;
 }
